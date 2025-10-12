@@ -1,3 +1,8 @@
+<p align="right">
+  <a href="https://github.com/pythonprincessux/Aurora-UI#readme">
+    📖 <b>View Full README</b>
+  </a>
+</p>
 <p align="center">
 <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/refs/heads/main/public/40A0BB20-4055-401D-83AB-8C4C58621097.png" width="800" alt="Aurora UI gradient banner" />
 </p>
