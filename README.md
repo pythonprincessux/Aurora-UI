@@ -79,7 +79,7 @@ Deployed via [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?style=
   <br/>
   To clone and run Aurora UI locally:  
 
-bash
+```bash
 git clone https://github.com/pythonprincessux/Aurora-UI.git
 cd Aurora-UI
 npm install
