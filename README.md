@@ -124,3 +124,11 @@ npm run dev
   <br/>
   <sub>© 2025 Aurora Platform • All Rights Reserved</sub>
 </p>
+</p>
+</p>
+
+<p align="center">
+  ✨ Made with 💖, creativity, and a hint of Aurora magic by <strong>Kiara McRae</strong> ✨  
+  <br/>
+  <sub>© 2025 Aurora Platform • All Rights Reserved</sub>
+</p>
