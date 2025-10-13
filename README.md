@@ -92,6 +92,13 @@ Then open **http://localhost:3000** in your browser. 🌈
 ## 🧠 Next Steps / Future Enhancements
 ```
 
+---
+
+## 📂 Project Documentation
+
+Looking for design system notes, UX guidelines, or Aurora case studies?  
+→ [**View the Aurora-UX Portfolio Repository**](https://github.com/pythonprincessux/Aurora-UX-Portfolio)
+
 <br/>
 <hr/>
 <br/>
