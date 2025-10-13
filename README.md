@@ -73,6 +73,7 @@ created as the visual core of the larger **Aurora Platform**.
 ---
 
 ## 🚀 Getting Started  
+
 <details>
   <summary>🚀 <strong>Setup & Run</strong> — click to expand</summary>
   <br/>
@@ -84,7 +85,6 @@ git clone https://github.com/pythonprincessux/Aurora-UI.git
 cd Aurora-UI
 npm install
 npm run dev
-
 <br/>
 <hr/>
 <br/>
