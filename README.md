@@ -38,13 +38,11 @@ created as the visual core of the larger **Aurora Platform**.
 
 ## ✨ Features
 
-- 🎧 **True Shuffle** — fair rotation that avoids repeats (Fisher–Yates under the hood)  
-- 🌈 **Animated Gradient UI** — seamless pink-to-violet Aurora flow  
-- 💫 **Pulse & Glow Effects** — hover + text shimmer motion  
-- 🧩 **Component-Ready Layout** — modular `src/app/page.tsx` + `src/app/layout.tsx`  
-- ⚡ **Built on Next 15 + Tailwind 4 + TypeScript** for speed and maintainability  
-
----
+🎧 **True Shuffle** — fair rotation algorithm that avoids repeats.  
+🌈 **Animated Gradient UI** — seamless pink-to-violet Aurora flow.  
+💫 **Pulse & Glow Effects** — hover + text shimmer motion.  
+🧩 **Component-Ready Layout** — modular `page.tsx` and `layout.tsx`.  
+☁️ **Built on Next 15 + Tailwind 4 + TypeScript** for speed & maintainability.  
 
 ---
 
@@ -54,10 +52,11 @@ created as the visual core of the larger **Aurora Platform**.
 |-----------|-------|
 | 🧱 **Framework** | [![Next.js](https://img.shields.io/badge/Next.js-black?logo=nextdotjs&logoColor=white)](https://nextjs.org) |
 | 🎨 **Styling** | [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com) + [![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?logo=postcss&logoColor=white)](https://postcss.org) |
-| 💻 **Language** | [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org) |
+| 💻 **Language** | [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://typescriptlang.org) |
 | ⚙️ **Deployment** | [![Vercel](https://img.shields.io/badge/Vercel-black?logo=vercel&logoColor=white)](https://vercel.com) + GitHub Pages |
 
 ---
+
 ## 🎨 Aurora Visual Gallery
 
 <p align="center">
@@ -73,8 +72,7 @@ created as the visual core of the larger **Aurora Platform**.
 
 ---
 
-## 🚀 Getting Started
-
+## 🚀 Getting Started  
 <details>
   <summary>🚀 <strong>Setup & Run</strong> — click to expand</summary>
   <br/>
@@ -86,9 +84,6 @@ git clone https://github.com/pythonprincessux/Aurora-UI.git
 cd Aurora-UI
 npm install
 npm run dev
-
-
-
 
 
 ```
