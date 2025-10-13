@@ -72,6 +72,8 @@ Deployed via [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?style=
 <p align="center"><sub>✨ Aurora UI — true shuffle meets seamless design ✨</sub></p>
 
 ---
+</details>
+```
 ## 🚀 Getting Started  
 <details>
   <summary>🚀 <strong>Getting Started</strong> — click to expand</summary>
