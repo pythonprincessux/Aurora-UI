@@ -92,7 +92,6 @@ Then open **http://localhost:3000** in your browser. 🌈
 
 ## 🧠 Next Steps / Future Enhancements
 ```
-</details>
 
 <br/>
 <hr/>
