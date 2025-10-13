@@ -101,7 +101,7 @@ npm run dev
 
 ---
 
-✨ **Optional Polish Ideas**
+✨ **Optional Polish Ideas**  
 - 🌈 Add shimmer divider animation between sections  
 - 💫 Soften blur-edge transitions between themes  
 - 🪩 Introduce hover parallax to banner and cards  
