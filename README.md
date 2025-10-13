@@ -85,7 +85,11 @@ cd Aurora-UI
 npm install
 npm run dev
 
-</details>  <!--
+<br/>
+<hr/>
+<br/>
+
+</p>
 ## 🧠 Next Steps / Future Enhancements
 
 | Feature | Status | Description |
