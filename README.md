@@ -85,7 +85,23 @@ cd Aurora-UI
 npm install
 npm run dev
 
+## 🧠 Next Steps / Future Enhancements
 
+| Feature | Status | Description |
+|:--|:--:|:--|
+| 🎧 **True Shuffle Algorithm** | ✅ | Implemented via Fisher–Yates logic for non-repeating rotation |
+| 🎵 **Playlist Component** | 🟡 | Create visual playlist grid using mock track data |
+| 🌗 **Theme Toggle** | 🟡 | Add Aurora Light / Midnight gradient modes |
+| 📊 **Analytics Dashboard** | 🟣 | Integrate Recharts or Chart.js for UI KPIs |
+| ☁️ **Aurora Cloud Dashboard (v2)** | 🚧 | Deploy expanded version to Vercel + AWS |
+
+---
+
+✨ **Optional Polish Ideas**  
+- Add shimmer divider animation between sections  
+- Soften blur-edge transitions between themes  
+- Introduce hover parallax to banner and cards  
+- Refine typography weights for cleaner contrast  
 ```
 </details>
 
