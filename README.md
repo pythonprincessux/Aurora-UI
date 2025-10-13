@@ -64,10 +64,9 @@ Deployed via [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?style=
 
 ## 📸 Preview
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/homepage-preview.png" 
-       width="800" alt="Aurora UI Homepage Preview" />
+  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/homepage-closeup.png"
+       width="800" alt="Aurora Glow Close-up" />
 </p>
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/homepage-closeup.png" 
        width="800" alt="Aurora Glow Close-up" />
