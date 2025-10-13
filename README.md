@@ -19,7 +19,7 @@
 ✨ <strong>Aurora UI – Designed by Kiara McRae</strong> ✨
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/homepage-preview.png"
+  <[img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/homepage-preview.png](https://github.com/pythonprincessux/Aurora-UI/blob/bec325585e6839283d52ec004e04c00c9f7d447f/public/homepage-preview.png)"
        width="800" alt="Aurora UI Homepage Preview" />
 </p>
 ---
