@@ -60,20 +60,19 @@ Deployed via [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?style=
 ## 🎨 Aurora Visual Gallery
 
 <p align="center">
-  <img src="public/preview-gradient.png" width="48%" alt="Aurora Gradient Preview"/>
-  <img src="public/preview-dawn.png" width="48%" alt="Aurora Dawn Theme"/>
+  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-gradient.png" width="48%" alt="Aurora Gradient Preview"/>
+  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-dawn.png" width="48%" alt="Aurora Dawn Theme"/>
 </p>
 
 <p align="center">
-  <img src="public/preview-midnight.png" width="48%" alt="Aurora Midnight Theme"/>
-  <img src="public/preview-glow.png" width="48%" alt="Aurora Glow Close-up"/>
+  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-midnight.png" width="48%" alt="Aurora Midnight Theme"/>
+  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-glow.png" width="48%" alt="Aurora Glow Close-up"/>
 </p>
 
 <p align="center"><sub>✨ Aurora UI — true shuffle meets seamless design ✨</sub></p>
-
 ---
 </details>
-```
+
 ## 🚀 Getting Started  
 <details>
   <summary>🚀 <strong>Getting Started</strong> — click to expand</summary>
