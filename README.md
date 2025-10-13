@@ -1,3 +1,13 @@
+<p align="center">
+  <a href="https://aurora-ui-orcin.vercel.app">
+    <img src="https://vercelbadge.vercel.app/api/pythonprincessux/Aurora-UI?style=for-the-badge&logo=vercel&color=purple" 
+         alt="Vercel Deployment Status" />
+  </a>
+  <br/>
+  <sub>🚀 Live Deployment — <a href="https://aurora-ui-orcin.vercel.app" target="_blank">aurora-ui-orcin.vercel.app</a></sub>
+</p>
+
+---
 <p align="right">
   <a href="https://github.com/pythonprincessux/Aurora-UI#readme">
     📖 <b>View Full README</b>
