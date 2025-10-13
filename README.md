@@ -96,7 +96,6 @@ npm run dev
        width="600" 
        style="border-radius:18px;opacity:0.85;filter:blur(1px) brightness(1.1);box-shadow:0 0 18px rgba(255,180,255,0.35);" />
 </p>
-</p>
 
 <p align="center">
   ✨ Made with 💖, creativity, and a hint of Aurora magic by <strong>Kiara McRae</strong> ✨  
