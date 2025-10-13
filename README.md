@@ -81,10 +81,12 @@ created as the visual core of the larger **Aurora Platform**.
 To clone and run **Aurora-UI** locally:
 
 ```bash
+
 git clone https://github.com/pythonprincessux/Aurora-UI.git
 cd Aurora-UI
 npm install
 npm run dev
+
 
 ## 🧠 Next Steps / Future Enhancements
 
