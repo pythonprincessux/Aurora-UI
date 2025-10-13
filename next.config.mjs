@@ -2,15 +2,20 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+
   eslint: {
     ignoreDuringBuilds: true,
   },
+
   typescript: {
     ignoreBuildErrors: true,
   },
+
+  // ✅ Keep only valid experiment
   experimental: {
-    appDir: true,
+    typedRoutes: true,
   },
+
   images: {
     unoptimized: true,
   },
