@@ -88,11 +88,11 @@ npm install
 npm run dev
 
 <!-- Footer divider -->
-
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-gradient.png"
-       alt="Aurora shimmer divider" width="620"
-       style="opacity:0.85;filter:drop-shadow(0 0 15px rgba(255,180,255,0.55));border-radius:16px;" />
+  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/refs/heads/main/public/40A0BB20-4055-401D-83AB-8C4C58621097.png" 
+       alt="Aurora shimmer divider" 
+       width="600" 
+       style="border-radius:18px;opacity:0.85;filter:blur(1px) brightness(1.1);box-shadow:0 0 18px rgba(255,180,255,0.35);" />
 </p>
 
 <p align="center">
@@ -100,4 +100,3 @@ npm run dev
   <br/>
   <sub>© 2025 Aurora Platform • All Rights Reserved</sub>
 </p>
-```
