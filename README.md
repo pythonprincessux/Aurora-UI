@@ -18,9 +18,7 @@
 <br/>
 ✨ <strong>Aurora UI – Designed by Kiara McRae</strong> ✨
 </p>
-<p align="center">
-  <[img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/homepage-preview.png]
-
+<p align="center">[(https://github.com/pythonprincessux/Aurora-UI/blob/bec325585e6839283d52ec004e04c00c9f7d447f/public/homepage-preview.png)
 # 🌌 Aurora-UI
 
 **A Spotify-style cloud app template — designed, built, and styled by Kiara McRae 💕**
