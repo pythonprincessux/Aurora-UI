@@ -46,18 +46,18 @@ created as the visual core of the larger **Aurora Platform**.
 
 ---
 
-## 🛠️ Tech Stack
+---
+
+## 🛠️ Tech Stack  
 
 | Category | Tools |
 |-----------|-------|
-| Framework | Next.js 15 |
-| Styling | Tailwind 4, PostCSS 8 |
-| Language | TypeScript |
-| Animation | Keyframes + Tailwind Utilities |
-| Deployment | Vercel / GitHub Pages |
+| 🧱 **Framework** | [![Next.js](https://img.shields.io/badge/Next.js-black?logo=nextdotjs&logoColor=white)](https://nextjs.org) |
+| 🎨 **Styling** | [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com) + [![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?logo=postcss&logoColor=white)](https://postcss.org) |
+| 💻 **Language** | [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org) |
+| ⚙️ **Deployment** | [![Vercel](https://img.shields.io/badge/Vercel-black?logo=vercel&logoColor=white)](https://vercel.com) + GitHub Pages |
 
 ---
-
 ## 🎨 Aurora Visual Gallery
 
 <p align="center">
