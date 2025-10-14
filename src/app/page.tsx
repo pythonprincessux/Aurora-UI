@@ -1,147 +1,109 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import ShuffleButton from "@/components/ShuffleButton";
+import { useState } from "react";
+import { trueShuffle } from "../utils/shuffle"; // correct relative path for your setup
+import Link from "next/link";
 
-export default function DashboardPage() {
-  const [chartData, setChartData] = useState<number[]>([5, 8, 3, 9, 6, 7]);
-  const [shuffleCount, setShuffleCount] = useState(0);
-  const [playlist, setPlaylist] = useState<string[]>([
-    "🌅 Sunrise Intro",
-    "💜 Violet Skies",
-    "🌙 Midnight Loop",
-    "🔥 Stardust Flow",
-    "💫 Ember Trails",
+export default function Home() {
+  const [playlist, setPlaylist] = useState([
+    "Sunrise Intro",
+    "Violet Skies",
+    "Midnight Loop",
+    "Stardust Flow",
+    "Ember Trails",
   ]);
+  const [currentTrack, setCurrentTrack] = useState(playlist[0]);
+  const [shuffling, setShuffling] = useState(false);
 
-  // Shuffle the playlist order whenever shuffleCount changes
-  useEffect(() => {
-    if (shuffleCount > 0) {
-      const newData = Array.from({ length: 6 }, () =>
-        Math.floor(Math.random() * 10)
-      );
-      setChartData(newData);
-
-      // Shuffle playlist tracks visually
-      setPlaylist((prev) => [...prev].sort(() => Math.random() - 0.5));
-    }
-  }, [shuffleCount]);
+  const handleShuffle = () => {
+    setShuffling(true);
+    const newPlaylist = trueShuffle([...playlist]);
+    setPlaylist(newPlaylist);
+    setCurrentTrack(newPlaylist[0]);
+    setTimeout(() => setShuffling(false), 600);
+  };
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-black via-zinc-900 to-orange-900 text-white overflow-hidden">
-      {/* 🟠 Ambient Ember Glow */}
-      <motion.div
-        className="absolute w-[600px] h-[600px] bg-orange-500/20 rounded-full blur-3xl"
-        animate={{
-          x: [0, 50, -30, 0],
-          y: [0, -40, 20, 0],
-        }}
-        transition={{
-          duration: 14,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-orange-950 via-black to-black text-center text-white px-4 py-20 overflow-hidden">
+      {/* Title */}
+      <h1 className="text-5xl sm:text-6xl font-bold text-orange-400 drop-shadow-[0_0_15px_rgba(255,122,0,0.6)]">
+        Aurora UI
+      </h1>
+      <p className="mt-4 text-zinc-400 max-w-md">
+        Where ember meets code — sleek gradients, motion, and music collide.
+      </p>
 
-      {/* 🔥 Title */}
-      <motion.h1
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(255,140,0,0.5)]"
+      {/* Shuffle Button */}
+      <motion.button
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.96 }}
+        onClick={handleShuffle}
+        className="mt-8 px-6 py-3 rounded-full bg-orange-500 text-black font-semibold shadow-md shadow-orange-700/50 hover:bg-orange-400 transition"
       >
-        Aurora Ember Dashboard 🔥
-      </motion.h1>
+        {shuffling ? "Shuffling..." : "Shuffle Track 🔄"}
+      </motion.button>
 
-      {/* 🔀 Shuffle Button */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
+      {/* Current Track Display */}
+      <motion.p
+        className="mt-4 text-lg text-orange-300 italic"
+        key={currentTrack}
+        initial={{ opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
-        className="z-10"
+        transition={{ duration: 0.4 }}
       >
-        <ShuffleButton />
-      </motion.div>
+        🎧 {currentTrack}
+      </motion.p>
 
-      {/* 🎵 Playlist Section */}
-      <motion.ul
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6 }}
-        className="mt-10 space-y-2 text-lg font-medium"
-      >
-        {playlist.map((track, i) => (
-          <li
-            key={i}
-            className="bg-gradient-to-r from-orange-900/50 to-amber-700/30 text-orange-200 px-6 py-2 rounded-lg shadow-md hover:scale-105 hover:shadow-orange-400/30 transition-all duration-300"
+      {/* Feature Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 w-full max-w-3xl">
+        {/* Visual Design */}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          className="rounded-xl p-6 bg-gradient-to-b from-orange-950 to-black border border-orange-800/40 shadow-md shadow-orange-900/40"
+        >
+          <h3 className="text-orange-300 font-semibold mb-2 flex items-center justify-center gap-2">
+            🌅 Visual Design
+          </h3>
+          <p className="text-zinc-400 text-sm">
+            Explore the gradient universe — built with Tailwind and motion.
+          </p>
+        </motion.div>
+
+        {/* True Shuffle */}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          className="rounded-xl p-6 bg-gradient-to-b from-orange-950 to-black border border-orange-800/40 shadow-md shadow-orange-900/40"
+        >
+          <h3 className="text-orange-300 font-semibold mb-2 flex items-center justify-center gap-2">
+            🎧 True Shuffle
+          </h3>
+          <p className="text-zinc-400 text-sm">
+            Experience real algorithmic randomness — no repeats until all tracks play.
+          </p>
+        </motion.div>
+
+        {/* Dashboard */}
+        <Link href="/dashboard">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="rounded-xl p-6 bg-gradient-to-b from-orange-950 to-black border border-orange-800/40 shadow-md shadow-orange-900/40 cursor-pointer"
           >
-            {track}
-          </li>
-        ))}
-      </motion.ul>
+            <h3 className="text-orange-300 font-semibold mb-2 flex items-center justify-center gap-2">
+              📊 Dashboard
+            </h3>
+            <p className="text-zinc-400 text-sm">
+              Explore Aurora Cloud analytics and visual insights.
+            </p>
+          </motion.div>
+        </Link>
+      </div>
 
-      {/* 📊 Mini Analytics */}
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8 }}
-        className="mt-16 w-full max-w-xl px-6"
-      >
-        <h2 className="text-lg font-semibold mb-3 text-orange-300/90">
-          Shuffle Stats Overview
-        </h2>
-
-        <div className="relative w-full h-32 bg-zinc-900/50 rounded-2xl border border-orange-800/40 overflow-hidden backdrop-blur-sm">
-          <svg
-            viewBox="0 0 100 40"
-            preserveAspectRatio="none"
-            className="w-full h-full"
-          >
-            <motion.polyline
-              fill="none"
-              stroke="#ff7a00"
-              strokeWidth="2"
-              points={chartData.map((val, i) => `${i * 20},${40 - val * 3}`).join(" ")}
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 1.2, ease: "easeInOut" }}
-            />
-          </svg>
-        </div>
-
-        <div className="flex justify-between text-xs text-zinc-500 mt-2">
-          <span>Total Plays</span>
-          <span>Avg Duration</span>
-          <span>Active Users</span>
-        </div>
-
-        <div className="flex justify-center gap-6 mt-4">
-          <div className="flex flex-col items-center">
-            <span className="text-2xl font-semibold text-orange-400">
-              {shuffleCount + 7}
-            </span>
-            <span className="text-xs text-zinc-400">Sessions</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-2xl font-semibold text-amber-400">
-              {(Math.random() * 5 + 3).toFixed(1)}m
-            </span>
-            <span className="text-xs text-zinc-400">Avg Time</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-2xl font-semibold text-green-400">
-              +{(Math.random() * 20).toFixed(0)}%
-            </span>
-            <span className="text-xs text-zinc-400">Growth</span>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* ⚡ Footer */}
-      <footer className="mt-20 text-center text-xs text-orange-400/60">
-        © 2025 Aurora Ember • Designed by Kiara McRae
+      {/* Footer */}
+      <footer className="mt-20 text-sm text-zinc-500">
+        © 2025 <span className="text-orange-400">Aurora Ember</span> • Designed by{" "}
+        <strong className="text-orange-300">Kiara McRae</strong>
       </footer>
-    </div>
+    </main>
   );
 }

@@ -1,9 +1,8 @@
-// src/utils/shuffle.ts
-export function trueShuffle<T>(array: T[]): T[] {
-  const newArray = [...array];
-  for (let i = newArray.length - 1; i > 0; i--) {
+export const trueShuffle = (arr: string[]) => {
+  let newArr = [...arr];
+  for (let i = newArr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
   }
-  return newArray;
-}
+  return newArr;
+};
