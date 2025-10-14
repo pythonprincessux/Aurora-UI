@@ -2,99 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Aurora Gradient background */
-:root {
-  --aurora-start: #ff8ec7;
-  --aurora-end: #b388ff;
+/* ─────────── GLOBAL RESET ─────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
+html,
 body {
-  background: linear-gradient(135deg, var(--aurora-start), var(--aurora-end));
-  color: white;
+  height: 100%;
+  overflow-x: hidden;
   font-family: 'Inter', sans-serif;
-  min-height: 100vh;
-}
-/* Aurora Theme Palettes */
-:root {
-  --aurora-dawn-from: #ec4899;
-  --aurora-dawn-via: #8b5cf6;
-  --aurora-dawn-to: #6366f1;
-
-  --aurora-midnight-from: #0f172a;
-  --aurora-midnight-via: #1e293b;
-  --aurora-midnight-to: #334155;
+  transition: background 0.6s ease, color 0.6s ease;
 }
 
-/* Smooth background transitions */
-body {
-  transition: background 1s ease, color 0.5s ease;
+/* ─────────── THEMES ─────────── */
+
+/* EMBER THEME */
+body[data-theme="ember"] {
+  background: linear-gradient(to bottom, #000000, #1a0f00, #ff6b00);
+  color: white;
 }
-@keyframes auroraFade {
-  0% {
+
+/* MIDNIGHT THEME */
+body[data-theme="midnight"] {
+  background: linear-gradient(to bottom, #000000, #130024, #3a0ca3);
+  color: white;
+}
+
+/* ─────────── TYPOGRAPHY ─────────── */
+h1,
+h2,
+h3 {
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ─────────── BUTTONS ─────────── */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+/* ─────────── SCROLLBAR ─────────── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff7a00 0%, #ff4500 100%);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffa94d 0%, #ff6b00 100%);
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+/* ─────────── ANIMATIONS ─────────── */
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    transform: scale(1);
+    transform: translateY(5px);
   }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.2);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.4);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.animate-auroraFade {
-  animation: auroraFade 1.5s ease-in-out forwards;
-}
-/* 🌌 Aurora Pulse (background breathing) */
-@keyframes auroraPulse {
-  0%, 100% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.25);
-  }
+/* ─────────── CARDS & DASHBOARD ─────────── */
+.dashboard-card {
+  background: rgba(24, 24, 24, 0.65);
+  border: 1px solid rgba(255, 123, 0, 0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.animate-auroraPulse {
-  animation: auroraPulse 10s ease-in-out infinite;
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 22px rgba(255, 123, 0, 0.4);
 }
 
-/* 🌟 Floating Particles */
-@keyframes floatParticles {
-  0% {
-    transform: translateY(0) translateX(0);
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(-200vh) translateX(10vw);
-    opacity: 0;
-  }
+/* ─────────── LINKS ─────────── */
+a {
+  color: #ff8a00;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.particle {
-  position: absolute;
-  background: radial-gradient(circle, white 0%, transparent 70%);
-  width: 6px;
-  height: 6px;
-  opacity: 0.3;
-  border-radius: 50%;
-  animation: floatParticles linear infinite;
-  pointer-events: none;
-}
-
-/* 🌈 Button shimmer */
-.button-shimmer {
-  background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.4), rgba(255,255,255,0.2));
-  background-size: 200%;
-  animation: shimmer 3s linear infinite;
-}
-
-@keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+a:hover {
+  color: #ffd580;
 }

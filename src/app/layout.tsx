@@ -1,104 +1,73 @@
-'use client';
-import './globals.css';
-import { useState, useEffect } from 'react';
+import "./globals.css";
+import type { Metadata } from "next";
+import PageTransition from "../components/PageTransition";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<'dawn' | 'midnight'>('dawn');
-  const [transitioning, setTransitioning] = useState(false);
-  const [glowPos, setGlowPos] = useState({ x: 50, y: 50 });
-  const [particles, setParticles] = useState<number[]>([]);
+export const metadata: Metadata = {
+  title: "Aurora UI — Ember Edition",
+  description:
+    "Aurora Ember — a glowing, ember-inspired edition of the Aurora UI built with Next.js, Tailwind, and TypeScript. True Shuffle. Pure Flow. Designed by Kiara McRae.",
+  keywords: [
+    "Aurora UI",
+    "Aurora Ember",
+    "Next.js",
+    "Tailwind CSS",
+    "TypeScript",
+    "Kiara McRae",
+    "UI Design",
+    "Shuffle Algorithm",
+    "Ember Glow",
+  ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/icon.png", type: "image/png" },
+      { url: "/ember-favicon.png", type: "image/png" },
+    ],
+  },
+  openGraph: {
+    title: "Aurora Ember Edition",
+    description:
+      "Experience Aurora Ember — an immersive, ember-toned interface inspired by energy and flow.",
+    url: "https://aurora-ui-orcin.vercel.app",
+    siteName: "Aurora UI",
+    images: [
+      {
+        url: "https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-dawn.png",
+        width: 1200,
+        height: 630,
+        alt: "Aurora Ember Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
-  // Generate particles
-  useEffect(() => {
-    const arr = Array.from({ length: 15 }, (_, i) => i);
-    setParticles(arr);
-  }, []);
-
-  // Aurora background
-  useEffect(() => {
-    const body = document.body;
-    if (theme === 'dawn') {
-      body.style.background =
-        'linear-gradient(to bottom right, var(--aurora-dawn-from), var(--aurora-dawn-via), var(--aurora-dawn-to))';
-    } else {
-      body.style.background =
-        'linear-gradient(to bottom right, var(--aurora-midnight-from), var(--aurora-midnight-via), var(--aurora-midnight-to))';
-    }
-  }, [theme]);
-
-  // Background flow (auto morph every 15s)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTheme(prev => (prev === 'dawn' ? 'midnight' : 'dawn'));
-    }, 15000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Mouse glow
-  useEffect(() => {
-    const handleMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth) * 100;
-      const y = (e.clientY / window.innerHeight) * 100;
-      setGlowPos({ x, y });
-    };
-    window.addEventListener('mousemove', handleMove);
-    return () => window.removeEventListener('mousemove', handleMove);
-  }, []);
-
-  const handleThemeSwitch = () => {
-    setTransitioning(true);
-    setTimeout(() => {
-      setTheme(theme === 'dawn' ? 'midnight' : 'dawn');
-      setTimeout(() => setTransitioning(false), 1000);
-    }, 400);
-  };
-
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="text-white min-h-screen flex flex-col items-center justify-center relative overflow-hidden animate-auroraPulse">
-        
-        {/* Floating particles */}
-        {particles.map((_, i) => (
-          <div
-            key={i}
-            className="particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100 + 50}%`,
-              animationDuration: `${20 + Math.random() * 10}s`,
-              animationDelay: `${Math.random() * 10}s`,
-            }}
-          />
-        ))}
-
-        {/* Glow tracking mouse */}
-        <div
-          className="absolute pointer-events-none transition-transform duration-300 ease-out"
-          style={{
-            top: `${glowPos.y}%`,
-            left: `${glowPos.x}%`,
-            transform: 'translate(-50%, -50%)',
-          }}
-        >
-          <div className="w-[40vw] h-[40vw] bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-indigo-500/20 blur-[120px] rounded-full" />
-        </div>
-
-        {/* Transition shimmer */}
-        {transitioning && (
-          <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-400 to-indigo-600 opacity-30 blur-3xl animate-auroraFade pointer-events-none"></div>
-        )}
-
-        {/* Toggle Button */}
-        <div className="absolute top-6 right-6 z-10">
-          <button
-            onClick={handleThemeSwitch}
-            className="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md transition-all shadow-md button-shimmer"
-          >
-            {theme === 'dawn' ? '🌙 Aurora Midnight' : '🌅 Aurora Dawn'}
-          </button>
-        </div>
-
-        {children}
+      <head>
+        <link rel="icon" href="/ember-favicon.png" type="image/png" />
+        <meta name="theme-color" content="#FF7A00" />
+      </head>
+      <body className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-orange-900 text-white overflow-x-hidden transition-all duration-700">
+        <PageTransition>
+          <main className="flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 py-16">
+            {children}
+          </main>
+          <footer className="mt-24 text-center text-sm text-orange-400/80 tracking-wide">
+            ✨ Made with 💖, creativity, and ember glow by{" "}
+            <strong>Kiara McRae</strong> ✨
+            <br />
+            <span className="text-xs text-zinc-400/70">
+              © 2025 Aurora Ember • All Rights Reserved
+            </span>
+          </footer>
+        </PageTransition>
       </body>
     </html>
   );
