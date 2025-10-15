@@ -2,6 +2,7 @@
 
 import React, { useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import LoadingWrapper from "../components/LoadingWrapper";
 import ShuffleButton from "../components/ShuffleButton";
 
 export default function HomePage() {
@@ -64,102 +65,128 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#0b0b0b] via-black to-[#1a0e08] text-zinc-200">
-      {/* Ambient <audio> element for Safari autoplay fix */}
-      <audio ref={audioRef} src="/sounds/ambient.mp3" loop preload="auto" />
+    <LoadingWrapper>
+      <main className="min-h-screen bg-gradient-to-b from-[#0b0b0b] via-black to-[#1a0e08] text-zinc-200">
+        {/* Ambient <audio> element */}
+        <audio ref={audioRef} src="/sounds/ambient.mp3" loop preload="auto" />
 
-      {/* Hero */}
-      <section className="relative mx-auto max-w-5xl px-6 pt-24 pb-10 text-center">
-        <h1
-          className="text-6xl sm:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text
-                     bg-gradient-to-b from-amber-300 via-orange-400 to-amber-600
-                     drop-shadow-[0_0_45px_rgba(255,170,50,0.4)] animate-pulse-slow"
-        >
-          Aurora UI
-        </h1>
-
-        <p className="mt-4 text-lg text-zinc-400">
-          Where ember meets code — sleek gradients, motion, and music collide.
-        </p>
-
-        <div className="mt-8 flex justify-center">
-          <ShuffleButton onClick={shuffleTracks} />
-        </div>
-
-        <ul className="mt-6 space-y-2 text-lg text-amber-300/90">
-          {playlist.map((track, i) => (
-            <li key={i}>{track}</li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Cards Section */}
-      <section className="mx-auto max-w-6xl px-6 pt-12 pb-28">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Visual Design */}
-          <Link
-            href="/visual-design"
-            className="group rounded-2xl border border-amber-400/10 bg-zinc-900/40 p-6
-                       shadow-[0_0_35px_rgba(255,170,40,0.15)] hover:shadow-[0_0_55px_rgba(255,200,60,0.28)]
-                       transition-all duration-300"
+        {/* Hero Section */}
+        <section className="relative mx-auto max-w-5xl px-6 pt-24 pb-10 text-center">
+          <h1
+            className="text-6xl sm:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text
+                       bg-gradient-to-b from-amber-300 via-orange-400 to-amber-600
+                       drop-shadow-[0_0_45px_rgba(255,170,50,0.4)] animate-pulse-slow"
           >
-            <div className="text-yellow-300 text-lg font-semibold flex items-center gap-2">
-              🎨 <span>Visual Design</span>
-            </div>
-            <p className="mt-2 text-sm text-zinc-400">
-              Explore the gradient universe — built with Tailwind and motion.
-            </p>
-          </Link>
+            Aurora UI
+          </h1>
 
-          {/* True Shuffle */}
-          <div
-            className="group rounded-2xl border border-amber-400/10 bg-zinc-900/40 p-6
-                       shadow-[0_0_35px_rgba(255,170,40,0.15)] hover:shadow-[0_0_55px_rgba(255,200,60,0.28)]
-                       transition-all duration-300"
-          >
-            <div className="text-yellow-300 text-lg font-semibold flex items-center gap-2">
-              🎧 <span>True Shuffle</span>
-            </div>
-            <p className="mt-2 text-sm text-zinc-400">
-              Experience real algorithmic randomness — no repeats until all
-              tracks play.
-            </p>
+          <p className="mt-4 text-lg text-zinc-400">
+            Where ember meets code — sleek gradients, motion, and music collide.
+          </p>
+
+          <div className="mt-8 flex justify-center">
+            <ShuffleButton onClick={shuffleTracks} />
           </div>
 
-          {/* Dashboard */}
-          <Link
-            href="/dashboard"
-            className="group rounded-2xl border border-amber-400/10 bg-zinc-900/40 p-6
-                       shadow-[0_0_35px_rgba(255,170,40,0.15)] hover:shadow-[0_0_55px_rgba(255,200,60,0.28)]
-                       transition-all duration-300"
-          >
-            <div className="text-yellow-300 text-lg font-semibold flex items-center gap-2">
-              📊 <span>Dashboard</span>
+          <ul className="mt-6 space-y-2 text-lg text-amber-300/90">
+            {playlist.map((track, i) => (
+              <li key={i}>{track}</li>
+            ))}
+          </ul>
+
+          {/* Navigation buttons */}
+          <div className="flex justify-center gap-4 mt-10">
+            <Link
+              href="/visual-design"
+              className="px-6 py-3 bg-amber-500/10 border border-amber-400/30 rounded-full text-amber-300 hover:bg-amber-500/20 transition"
+            >
+              Visual Design
+            </Link>
+
+            <Link
+              href="/projects"
+              className="px-6 py-3 bg-purple-500/10 border border-purple-400/30 rounded-full text-purple-300 hover:bg-purple-500/20 transition"
+            >
+              Projects
+            </Link>
+
+            <Link
+              href="/dashboard"
+              className="px-6 py-3 bg-orange-500/10 border border-orange-400/30 rounded-full text-orange-300 hover:bg-orange-500/20 transition"
+            >
+              Dashboard
+            </Link>
+          </div>
+        </section>
+
+        {/* Feature Cards */}
+        <section className="mx-auto max-w-6xl px-6 pt-12 pb-28">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Visual Design */}
+            <Link
+              href="/visual-design"
+              className="group rounded-2xl border border-amber-400/10 bg-zinc-900/40 p-6
+                         shadow-[0_0_35px_rgba(255,170,40,0.15)] hover:shadow-[0_0_55px_rgba(255,200,60,0.28)]
+                         transition-all duration-300"
+            >
+              <div className="text-yellow-300 text-lg font-semibold flex items-center gap-2">
+                🎨 <span>Visual Design</span>
+              </div>
+              <p className="mt-2 text-sm text-zinc-400">
+                Explore the gradient universe — built with Tailwind and motion.
+              </p>
+            </Link>
+
+            {/* True Shuffle */}
+            <div
+              className="group rounded-2xl border border-amber-400/10 bg-zinc-900/40 p-6
+                         shadow-[0_0_35px_rgba(255,170,40,0.15)] hover:shadow-[0_0_55px_rgba(255,200,60,0.28)]
+                         transition-all duration-300"
+            >
+              <div className="text-yellow-300 text-lg font-semibold flex items-center gap-2">
+                🎧 <span>True Shuffle</span>
+              </div>
+              <p className="mt-2 text-sm text-zinc-400">
+                Experience real algorithmic randomness — no repeats until all
+                tracks play.
+              </p>
             </div>
-            <p className="mt-2 text-sm text-zinc-400">
-              Aurora Cloud analytics and visual insights.
-            </p>
-          </Link>
-        </div>
-      </section>
 
-      {/* Ambient toggle */}
-      <button
-        onClick={toggleAmbient}
-        className="fixed left-6 bottom-6 rounded-full bg-zinc-900/70 border border-amber-400/20
-                   px-4 py-2 text-sm text-amber-200 shadow-[0_0_25px_rgba(255,170,40,0.18)]
-                   hover:bg-zinc-800/70 transition-colors"
-      >
-        {ambientOn ? "🔥 Ambient: On" : "🌑 Ambient: Off"}
-      </button>
+            {/* Dashboard */}
+            <Link
+              href="/dashboard"
+              className="group rounded-2xl border border-amber-400/10 bg-zinc-900/40 p-6
+                         shadow-[0_0_35px_rgba(255,170,40,0.15)] hover:shadow-[0_0_55px_rgba(255,200,60,0.28)]
+                         transition-all duration-300"
+            >
+              <div className="text-yellow-300 text-lg font-semibold flex items-center gap-2">
+                📊 <span>Dashboard</span>
+              </div>
+              <p className="mt-2 text-sm text-zinc-400">
+                Aurora Cloud analytics and visual insights.
+              </p>
+            </Link>
+          </div>
+        </section>
 
-      {/* Footer */}
-      <footer className="pb-10 text-center text-xs text-zinc-500">
-        ✨ Made with 💖, creativity, and ember glow by{" "}
-        <strong className="text-amber-300">Kiara McRae</strong> ✨
-        <br />
-        © 2025 Aurora Ember • All Rights Reserved
-      </footer>
-    </main>
+        {/* Ambient Toggle */}
+        <button
+          onClick={toggleAmbient}
+          className="fixed left-6 bottom-6 rounded-full bg-zinc-900/70 border border-amber-400/20
+                     px-4 py-2 text-sm text-amber-200 shadow-[0_0_25px_rgba(255,170,40,0.18)]
+                     hover:bg-zinc-800/70 transition-colors"
+        >
+          {ambientOn ? "🔥 Ambient: On" : "🌑 Ambient: Off"}
+        </button>
+
+        {/* Footer */}
+        <footer className="pb-10 text-center text-xs text-zinc-500">
+          ✨ Made with 💖, creativity, and ember glow by{" "}
+          <strong className="text-amber-300">Kiara McRae</strong> ✨
+          <br />
+          © 2025 Aurora Ember • All Rights Reserved
+        </footer>
+      </main>
+    </LoadingWrapper>
   );
 }

@@ -20,7 +20,7 @@ export default function HomePage() {
 
   const [playlist, setPlaylist] = useState<string[]>(tracks);
 
-  // Fisher-Yates Shuffle
+  // Fisher–Yates Shuffle
   const shuffle = () => {
     const a = [...tracks];
     for (let i = a.length - 1; i > 0; i--) {
@@ -30,13 +30,13 @@ export default function HomePage() {
     setPlaylist(a);
   };
 
-  // 🔥 Ambient crackle logic (fixed for ambient.mp3)
+  // 🔥 Ambient crackle logic
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [ambientOn, setAmbientOn] = useState(false);
 
   const ensureAudio = () => {
     if (!audioRef.current) {
-      const el = new Audio("/sounds/ambient.mp3"); // ✅ your correct filename
+      const el = new Audio("/sounds/ambient.mp3");
       el.loop = true;
       el.volume = 0.0;
       audioRef.current = el;
@@ -66,10 +66,7 @@ export default function HomePage() {
         audio.volume = volume;
       } else {
         clearInterval(fade);
-        if (!fadeIn) {
-          audio.pause();
-          console.log("🌑 Ambient sound paused");
-        }
+        if (!fadeIn) audio.pause();
       }
     }, 100);
   };
@@ -111,9 +108,9 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-6 pt-12 pb-28">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Visual Design */}
-          <Link
-            href="/visual-design"
-            className="group rounded-2xl border border-amber-400/10 bg-zinc-900/40 p-6
+          <button
+            onClick={() => (window.location.href = "/visual-design")}
+            className="group rounded-2xl border border-amber-400/10 bg-zinc-900/40 p-6 w-full text-left
                        shadow-[0_0_35px_rgba(255,170,40,0.15)] hover:shadow-[0_0_55px_rgba(255,200,60,0.28)]
                        transition-all duration-300"
           >
@@ -123,7 +120,7 @@ export default function HomePage() {
             <p className="mt-2 text-sm text-zinc-400">
               Explore the gradient universe — built with Tailwind and motion.
             </p>
-          </Link>
+          </button>
 
           {/* True Shuffle */}
           <div

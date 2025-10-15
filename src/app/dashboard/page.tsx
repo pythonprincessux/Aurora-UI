@@ -1,125 +1,88 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
-import ShuffleButton from "../../components/ShuffleButton";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function DashboardPage() {
-  const tracks = [
-    "🌸 Aurora Bloom",
-    "🌅 Sunrise Intro",
-    "💜 Violet Skies",
-    "🌙 Midnight Loop",
-    "🔥 Stardust Flow",
-    "🪶 Ember Trails",
-  ];
-
-  const data = [
-    { day: "Mon", sessions: 14 },
-    { day: "Tue", sessions: 28 },
-    { day: "Wed", sessions: 22 },
-    { day: "Thu", sessions: 30 },
-    { day: "Fri", sessions: 41 },
-    { day: "Sat", sessions: 19 },
-    { day: "Sun", sessions: 25 },
-  ];
-
   const stats = [
-    { label: "TOTAL PLAYS", value: "1,264", color: "from-amber-400 to-orange-500" },
-    { label: "AVG. DURATION", value: "4.8m", color: "from-pink-400 to-rose-500" },
-    { label: "ACTIVE USERS", value: "342", color: "from-yellow-400 to-amber-500" },
-    { label: "SHUFFLE SESSIONS", value: "97", color: "from-violet-500 to-purple-600" },
+    { label: "☁️ Total Streams", value: 128400, color: "from-amber-400 to-orange-600" },
+    { label: "💿 Tracks Played", value: 9432, color: "from-purple-400 to-violet-600" },
+    { label: "⏱ Avg. Session Time", value: 6.7, suffix: "m", color: "from-blue-400 to-indigo-600" },
+    { label: "🪄 True Shuffle Accuracy", value: 99.3, suffix: "%", color: "from-pink-400 to-amber-500" },
   ];
+
+  // Animated number logic
+  const [counts, setCounts] = useState(stats.map(() => 0));
+
+  useEffect(() => {
+    const timers = stats.map((stat, i) => {
+      const target = stat.value;
+      let current = 0;
+      const step = target / 80; // smoother animation
+      return setInterval(() => {
+        current += step;
+        if (current >= target) {
+          clearInterval(timers[i]);
+          current = target;
+        }
+        setCounts(prev => {
+          const copy = [...prev];
+          copy[i] = current;
+          return copy;
+        });
+      }, 20);
+    });
+
+    return () => timers.forEach(clearInterval);
+  }, []);
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-black via-zinc-900 to-orange-900 text-white py-20">
-      {/* Header */}
-      <motion.h1
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-5xl font-extrabold bg-gradient-to-r from-amber-400 to-orange-600 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,170,64,0.4)]"
-      >
-        Aurora Cloud Dashboard ☁️
-      </motion.h1>
+    <main className="min-h-screen bg-gradient-to-b from-black via-zinc-950 to-amber-950 text-zinc-200 px-6 py-24">
+      <div className="max-w-6xl mx-auto text-center">
+        <h1 className="text-5xl font-extrabold bg-gradient-to-b from-amber-300 via-orange-400 to-amber-600 bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(255,170,50,0.4)]">
+          Aurora Cloud Dashboard
+        </h1>
+        <p className="mt-4 text-zinc-400 text-lg">
+          Real-time performance metrics — powered by motion, gradient, and code.
+        </p>
 
-      <p className="text-zinc-400 mt-2 mb-8">
-        Real-time insight into your Aurora environment
-      </p>
+        {/* Analytics cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+          {stats.map((stat, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.05 }}
+              className={`rounded-2xl p-6 text-center bg-gradient-to-b ${stat.color} shadow-[0_0_30px_rgba(255,170,40,0.2)] hover:shadow-[0_0_60px_rgba(255,200,60,0.3)] transition-all`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.15, duration: 0.5 }}
+            >
+              <div className="text-4xl font-bold text-white drop-shadow-md">
+                {counts[i].toFixed(stat.value < 100 ? 1 : 0)}
+                {stat.suffix ?? ""}
+              </div>
+              <div className="mt-2 text-sm font-medium text-zinc-100/90">
+                {stat.label}
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
-      <ShuffleButton />
-
-      {/* Playlist */}
-      <ul className="mt-8 space-y-2 text-center text-zinc-300">
-        {tracks.map((track, index) => (
-          <motion.li
-            key={index}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 * index }}
-            className="text-lg"
+        {/* Back to Aurora UI */}
+        <div className="mt-16">
+          <Link
+            href="/"
+            className="inline-block px-6 py-3 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 hover:bg-amber-400/20 transition-colors"
           >
-            {track}
-          </motion.li>
-        ))}
-      </ul>
+            ← Back to Aurora UI
+          </Link>
+        </div>
 
-      {/* Graph Section */}
-      <div className="mt-12 w-full max-w-4xl h-64 bg-zinc-900/50 rounded-2xl p-6 shadow-lg shadow-black/40 backdrop-blur-sm">
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#ffb34720" />
-            <XAxis dataKey="day" stroke="#ffb347" />
-            <YAxis stroke="#ffb347" />
-            <Tooltip />
-            <Line
-              type="monotone"
-              dataKey="sessions"
-              stroke="#ff7a00"
-              strokeWidth={3}
-              dot={{ r: 4, fill: "#fff" }}
-            />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
-
-      {/* Stats Cards */}
-      <section className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 max-w-6xl w-full">
-        {stats.map((stat, index) => (
-          <motion.div
-            key={stat.label}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 * index }}
-            className={`p-6 rounded-2xl text-center bg-gradient-to-br ${stat.color} shadow-lg shadow-black/40 hover:scale-[1.03] transition-all`}
-          >
-            <p className="text-xs uppercase tracking-widest text-zinc-900/90 font-semibold">
-              {stat.label}
-            </p>
-            <p className="text-4xl font-extrabold text-white drop-shadow-md mt-2">
-              {stat.value}
-            </p>
-          </motion.div>
-        ))}
-      </section>
-
-      {/* Footer */}
-      <div className="mt-10 text-center">
-        <a
-          href="/dashboard/v2"
-          className="text-sm font-semibold text-orange-400 hover:text-orange-300 underline underline-offset-4 transition-all"
-        >
-          View Aurora Cloud Analytics (v2) →
-        </a>
+        {/* Footer */}
+        <footer className="mt-24 text-sm text-zinc-500">
+          ✨ Designed, animated, and built by <strong className="text-amber-300">Kiara McRae</strong> ✨
+        </footer>
       </div>
     </main>
   );
