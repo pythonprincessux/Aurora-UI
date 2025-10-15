@@ -1,125 +1,213 @@
 "use client";
 
-import { motion } from "framer-motion";
+import React from "react";
 import Link from "next/link";
 
 export default function VisualDesignPage() {
-  const projects = [
-    {
-      title: "🔥 Aurora UI (Ember Edition)",
-      desc: "Spotify-style cloud app with True Shuffle and glowing gradients. Built with Next.js + Tailwind + TypeScript.",
-      link: "/projects/aurora",
-    },
-    {
-      title: "📊 Aurora Cloud Dashboard v2",
-      desc: "Real-time analytics with animated counters and data visualization powered by Recharts and Framer Motion.",
-      link: "/dashboard",
-    },
-    {
-      title: "✈️ Delta IT Internship Simulation",
-      desc: "AI-powered automation proposal combining UiPath workflows and Google Cloud data processing.",
-      link: "/projects/delta-it",
-    },
-    {
-      title: "🏗️ Construction UX Study",
-      desc: "Human Systems Engineering meets project management — improving on-site communication through UX design.",
-      link: "/projects/construction-ux",
-    },
-  ];
-
   return (
-    <main className="min-h-screen bg-gradient-to-b from-purple-900 via-violet-800 to-orange-900 text-zinc-100">
-      {/* Hero Banner */}
-      <section className="text-center py-24 px-6">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-6xl sm:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-violet-400 drop-shadow-[0_0_40px_rgba(255,180,100,0.4)]"
+    <main className="min-h-screen bg-gradient-to-b from-[#0b0b0b] via-black to-[#1a0e08] text-zinc-200">
+      {/* Hero */}
+      <section className="relative text-center pt-24 pb-16 px-6">
+        <h1
+          className="text-6xl sm:text-7xl font-extrabold text-transparent bg-clip-text
+                     bg-gradient-to-b from-amber-300 via-orange-400 to-amber-600
+                     drop-shadow-[0_0_45px_rgba(255,170,50,0.4)] animate-pulse-slow"
         >
-          Kiara McRae — Designer, Builder, Visionary
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mt-6 max-w-2xl mx-auto text-lg text-zinc-300"
-        >
-          I design and build human-centered systems that blend art, data, and automation.
-        </motion.p>
-
-        <div className="mt-10 flex justify-center gap-4">
+          Kiara McRae
+        </h1>
+        <p className="mt-4 text-lg text-zinc-400">
+          Designer · Builder · Visionary — blending human-centered design with intelligent systems.
+        </p>
+        <div className="mt-6 flex justify-center gap-6">
           <Link
             href="/"
-            className="px-6 py-3 rounded-full bg-amber-400/10 border border-amber-300/30 text-amber-300 hover:bg-amber-400/20 transition-all"
+            className="rounded-full bg-amber-500/10 border border-amber-400/20 px-5 py-2 text-amber-300
+                       hover:bg-amber-500/20 transition-all duration-300"
           >
             View Aurora
           </Link>
           <Link
             href="/projects"
-            className="px-6 py-3 rounded-full bg-violet-400/10 border border-violet-300/30 text-violet-300 hover:bg-violet-400/20 transition-all"
+            className="rounded-full bg-amber-500/10 border border-amber-400/20 px-5 py-2 text-amber-300
+                       hover:bg-amber-500/20 transition-all duration-300"
           >
-            See Projects
+            See My Work
           </Link>
         </div>
       </section>
 
-      {/* About Me */}
-      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="text-4xl font-semibold text-amber-300 mb-6"
-        >
-          About Me
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="text-lg text-zinc-300 leading-relaxed"
-        >
-          I merge UX strategy with engineering precision to build tools that feel as intuitive as
-          they are intelligent. I lead, design, and automate — all with the goal of making tech more
-          human.
-        </motion.p>
-      </section>
-
       {/* Project Gallery */}
-      <section className="max-w-6xl mx-auto px-6 pb-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-        {projects.map((p, i) => (
-          <motion.div
+      <section className="mx-auto max-w-6xl px-6 pb-24 grid gap-8 md:grid-cols-2">
+        {[
+          {
+            title: "Aurora UI (Ember Edition)",
+            desc: "Spotify-style cloud app with True Shuffle and motion-driven UI.",
+            link: "/dashboard",
+          },
+          {
+            title: "Aurora Cloud Dashboard v2",
+            desc: "Data visualization suite (Recharts) with themed analytics.",
+            link: "/dashboard/v2",
+          },
+          {
+            title: "Delta IT Automation Simulation",
+            desc: "AI automation proposal for enterprise workflows.",
+            link: "#",
+          },
+          {
+            title: "Construction UX Study",
+            desc: "Human Systems Engineering meets field project management.",
+            link: "#",
+          },
+        ].map((proj, i) => (
+          <Link
             key={i}
-            whileHover={{ scale: 1.03 }}
-            transition={{ duration: 0.25 }}
-            className="rounded-2xl p-6 bg-gradient-to-b from-zinc-900/70 to-black/70 border border-amber-400/10 shadow-[0_0_30px_rgba(255,170,60,0.1)] hover:shadow-[0_0_50px_rgba(255,190,80,0.25)]"
+            href={proj.link}
+            className="group rounded-2xl border border-amber-400/10 bg-zinc-900/40 p-6
+                       shadow-[0_0_35px_rgba(255,170,40,0.15)] hover:shadow-[0_0_55px_rgba(255,200,60,0.28)]
+                       transition-all duration-300"
           >
-            <h3 className="text-xl font-semibold text-amber-300 mb-2">{p.title}</h3>
-            <p className="text-sm text-zinc-400">{p.desc}</p>
-            <Link href={p.link} className="mt-4 inline-block text-amber-400 text-sm font-medium hover:text-amber-300">
-              Explore →
-            </Link>
-          </motion.div>
+            <h3 className="text-amber-300 text-xl font-semibold mb-2">
+              {proj.title}
+            </h3>
+            <p className="text-zinc-400 text-sm">{proj.desc}</p>
+          </Link>
         ))}
       </section>
 
-      {/* Contact + Footer */}
-      <footer className="text-center py-10 text-sm text-zinc-400 border-t border-zinc-800">
-        <p>
-          ✨ Designed & built by <strong className="text-amber-300">Kiara McRae</strong> ✨
+      {/* Why Aurora Section */}
+      <section className="mx-auto max-w-3xl px-6 pb-24 text-center">
+        <h2 className="text-3xl font-semibold text-amber-300 mb-4">
+          Why I Created Aurora UI
+        </h2>
+        <p className="text-zinc-300 leading-relaxed text-[17px]">
+          Aurora UI was born out of my drive to merge everything I do — design, leadership,
+          and engineering — into one living example. I wanted to build a space that didn’t
+          just talk about my skills but <em>showed</em> them in motion: clean design systems,
+          responsive code, animations, and real interactivity. It started as a technical
+          challenge but became a full reflection of who I am — someone who delivers beauty,
+          logic, and purpose in every project.
         </p>
-        <div className="mt-4 flex justify-center gap-6 text-amber-300 text-sm">
-          <a href="https://linkedin.com/in/kiaramcrae" target="_blank" rel="noopener noreferrer">
+      </section>
+
+      {/* About Me */}
+      <section className="mx-auto max-w-3xl px-6 pb-6 text-center">
+        <h2 className="text-3xl font-semibold text-amber-300 mb-4">About Me</h2>
+
+        <div className="space-y-5 text-zinc-300 leading-relaxed text-[17px]">
+          <p>
+            I design and build systems that feel effortless. My work sits at the intersection of{" "}
+            <span className="text-amber-300">UX strategy</span>,{" "}
+            <span className="text-amber-300">front-end engineering</span>, and{" "}
+            <span className="text-amber-300">automation</span> — translating messy, real-world
+            constraints into products that look sharp and perform even sharper.
+          </p>
+          <p>
+            I’m comfortable owning the full stack of delivery: shaping the problem, crafting the
+            interaction model, prototyping with production-ready code, and instrumenting the
+            experience so we can learn and iterate fast. I love motion as a teaching tool — subtle
+            animation that guides the eye and reduces cognitive load.
+          </p>
+          <p>
+            Recent focus areas: resilient UI patterns, data visualizations that actually inform
+            decisions, and “human-in-the-loop” workflows where AI assists without taking over.
+          </p>
+          <p>
+            I lead with empathy and vision. My background in operations, leadership, and human
+            systems engineering gives me a unique lens — I see how design decisions ripple through
+            teams, workflows, and outcomes. I care deeply about equity, clarity, and making tech
+            <em> feel human</em> again.
+          </p>
+          <p className="text-zinc-400">
+            TL;DR — I lead, design, and automate with taste. If you value velocity and craft,
+            we’ll get along.
+          </p>
+        </div>
+      </section>
+
+      {/* Digital Resume */}
+      <section className="mx-auto max-w-3xl px-6 pb-24 text-center">
+        <h2 className="text-3xl font-semibold text-amber-300 mb-4">
+          Digital Résumé
+        </h2>
+        <p className="text-zinc-400 mb-6">
+          Explore my experience, certifications, and impact metrics in one place.
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1JbD9YourResumeLinkHere/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-amber-500/10 border border-amber-400/20 px-6 py-2 text-amber-300
+                     hover:bg-amber-500/20 hover:text-amber-200 transition-all duration-300"
+        >
+          📄 View My Resume
+        </a>
+      </section>
+
+      {/* Contact / CTA */}
+      <section className="mx-auto max-w-3xl px-6 pb-28 text-center">
+        <h2 className="text-2xl font-semibold text-amber-300 mb-6">
+          Let’s Connect
+        </h2>
+
+        <p className="text-zinc-400 mb-8">
+          Whether it’s building beautiful systems, leading teams, or designing for scale —
+          I’m always open to meaningful collaborations and forward-thinking opportunities.
+        </p>
+
+        {/* Glowing “Let’s Work Together” pulse */}
+        <p className="text-amber-400 text-lg font-medium mb-10 animate-pulse-slow drop-shadow-[0_0_25px_rgba(255,170,40,0.45)]">
+          ✨ Let’s Work Together ✨
+        </p>
+
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/kiara-mcraetopperformer"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="rounded-full bg-amber-500/10 border border-amber-400/20 px-5 py-2 text-amber-300
+                       hover:bg-amber-500/20 hover:text-amber-200 transition-all duration-300"
+          >
             LinkedIn
           </a>
-          <a href="https://github.com/kiaramcrae" target="_blank" rel="noopener noreferrer">
+
+          {/* Gmail */}
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=kiarammcrae@gmail.com&su=Let's%20Connect%20via%20Aurora%20UI&body=Hi%20Kiara%2C%0A%0AI%20just%20explored%20Aurora%20UI%20and%20wanted%20to%20connect%20because..."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Email Kiara McRae"
+            className="rounded-full bg-amber-500/10 border border-amber-400/20 px-5 py-2 text-amber-300
+                       hover:bg-amber-500/20 hover:text-amber-200 transition-all duration-300"
+          >
+            Email Me
+          </a>
+
+          {/* Phone */}
+          <a
+            href="tel:6787708243"
+            aria-label="Call Kiara McRae"
+            className="rounded-full bg-amber-500/10 border border-amber-400/20 px-5 py-2 text-amber-300
+                       hover:bg-amber-500/20 hover:text-amber-200 transition-all duration-300"
+          >
+            📞 Call Me
+          </a>
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/pythonprincessux"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="rounded-full bg-amber-500/10 border border-amber-400/20 px-5 py-2 text-amber-300
+                       hover:bg-amber-500/20 hover:text-amber-200 transition-all duration-300"
+          >
             GitHub
           </a>
-          <a href="mailto:kiarammcrae@gmail.com">Email</a>
         </div>
-      </footer>
+      </section>
     </main>
   );
 }
