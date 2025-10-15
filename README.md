@@ -1,3 +1,4 @@
+![Aurora UI — Ember Edition](public/aurora-preview.png)
 <p align="center">
   <a href="https://aurora-ui-orcin.vercel.app">
     <img src="https://vercelbadge.vercel.app/api/pythonprincessux/Aurora-UI?style=for-the-badge&logo=vercel&color=purple" 
