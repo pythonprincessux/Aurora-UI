@@ -110,3 +110,30 @@ npm run dev
   <br/>
   <sub>© 2025 Aurora Platform • All Rights Reserved</sub>
 </p>
+---
+
+## ☁️ Aurora Cloud Dashboard v2
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-dawn.png" 
+       width="820" alt="Aurora Cloud Dashboard v2 Preview" />
+</p>
+
+Aurora Cloud Dashboard v2 brings a glowing Ember aesthetic to real-time analytics.  
+It tracks shuffle activity, user engagement, and session data — powered by **Recharts** and **Framer Motion**.
+
+### ✨ Highlights
+- 🧩 Dynamic metric cards with live glow
+- 📈 Animated line + bar charts using Recharts
+- ☁️ Cloud-native design principles with responsive layout
+- 🎨 Ember color palette: orange, amber, and warm gradients
+
+**Access:**  
+→ [**Aurora Cloud Dashboard v2**](https://aurora-ui-orcin.vercel.app/dashboard/v2)
+
+---
+
+<p align="center">
+  <sub>🔥 Aurora Cloud v2 • designed and engineered by Kiara McRae</sub><br/>
+  <sub>© 2025 Aurora Ember • All Rights Reserved</sub>
+</p>
