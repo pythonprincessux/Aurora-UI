@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/pythonprincessux/aurora/main/public/images/aurora-preview.png" alt="Aurora UI — Ember Edition Banner" width="100%">
+  <img src="https://raw.githubusercontent.com/pythonprincessux/aurora/main/public/aurora-preview.png" alt="Aurora UI — Ember Edition Banner" width="100%">
 </p>
 # 🌌 Aurora UI — Ember Edition  
 **Created by [Kiara McRae](https://www.linkedin.com/in/kiara-mcraetopperformer)**  
