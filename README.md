@@ -3,7 +3,7 @@
 
 > _A full-stack, cloud-native showcase blending UX, engineering, and automation into one glowing ecosystem._
 
-![Aurora Banner](public/images/aurora-preview.png)
+![Aurora Banner](public/aurora-preview.png)
 
 ---
 
