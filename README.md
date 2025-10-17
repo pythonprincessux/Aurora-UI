@@ -1,140 +1,117 @@
-![Aurora UI — Ember Edition](public/aurora-preview.png)
-<p align="center">
-  <a href="https://aurora-ui-orcin.vercel.app">
-    <img src="https://vercelbadge.vercel.app/api/pythonprincessux/Aurora-UI?style=for-the-badge&logo=vercel&color=purple" 
-         alt="Vercel Deployment Status" />
-  </a>
-  <br/>
-  <sub>🚀 Live Deployment — <a href="https://aurora-ui-orcin.vercel.app" target="_blank">aurora-ui-orcin.vercel.app</a></sub>
-</p>
+# 🌌 Aurora UI — Ember Edition  
+**Created by [Kiara McRae](https://www.linkedin.com/in/kiara-mcraetopperformer)**  
 
----
-<p align="right">
-  <a href="https://github.com/pythonprincessux/Aurora-UI#readme">
-    📖 <b>View Full README</b>
-  </a>
-</p>
+> _A full-stack, cloud-native showcase blending UX, engineering, and automation into one glowing ecosystem._
 
-<!-- Header banners -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-gradient.png"
-       width="880" alt="Aurora UI gradient banner" />
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-dawn.png"
-       width="880" alt="Aurora UI homepage preview" />
-</p>
-
-<p align="center">
-  <a href="https://aurora-ui-orcin.vercel.app">
-    <img src="https://img.shields.io/badge/View%20Demo-Aurora%20UI%20🌈-ff69b4?style=for-the-badge&logo=vercel"
-         alt="View Demo Badge" />
-  </a>
-  <br/>
-  ✨ <strong>Aurora UI — Designed by Kiara McRae</strong> ✨
-</p>
+![Aurora Banner](public/images/aurora-preview.png)
 
 ---
 
-# 🌌 Aurora-UI
+## ✨ Overview
 
-**A Spotify-style cloud app template — designed, built, and styled by Kiara McRae 💕**
+**Aurora UI** is more than a portfolio — it’s a living proof-of-concept that merges **design systems, automation, and scalable deployment** in a single responsive experience.  
+It was built to demonstrate technical and creative mastery across **frontend development**, **DevOps**, and **human-centered design**.
 
-Aurora-UI is a modern, gradient-driven interface built with **Next.js 15**, **TypeScript**, and **Tailwind 4**.  
-It features smooth background motion, dynamic shuffle logic, and a soft glassmorphism aesthetic —  
-created as the visual core of the larger **Aurora Platform**.
-
----
-
-## ✨ Features
-
-🎧 **True Shuffle** — fair rotation algorithm that avoids repeats.  
-🌈 **Animated Gradient UI** — seamless pink-to-violet Aurora flow.  
-💫 **Pulse & Glow Effects** — hover + text shimmer motion.  
-🧩 **Component-Ready Layout** — modular `page.tsx` and `layout.tsx`.  
-☁️ **Built on Next 15 + Tailwind 4 + TypeScript** for speed & maintainability.  
+This project anchors Kiara’s UX + Front-End Developer portfolio, highlighting everything from motion design and accessibility to CI/CD pipelines and cloud orchestration.
 
 ---
 
-## 🛠 Tech Stack
+## 🧩 Core Features
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js Badge"/>
-  <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS Badge"/>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript Badge"/>
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Badge"/>
-</p>
-
----
-## 🎨 Aurora Visual Gallery
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-gradient.png" width="48%" alt="Aurora Gradient Preview"/>
-  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-dawn.png" width="48%" alt="Aurora Dawn Theme"/>
-</p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-midnight.png" width="48%" alt="Aurora Midnight Theme"/>
-  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-glow.png" width="48%" alt="Aurora Glow Close-up"/>
-</p>
-
-<p align="center"><sub>✨ Aurora UI — true shuffle meets seamless design ✨</sub></p>
+| Category | Description |
+|-----------|-------------|
+| 🎨 **Design System** | TailwindCSS-based gradient and motion components for a consistent visual language |
+| ⚡ **True Shuffle** | Fisher–Yates algorithm ensuring unbiased randomization and playback experience |
+| 🎧 **Ambient Audio Layer** | Framer Motion + ambient loops for immersive storytelling |
+| 📊 **Aurora Cloud Dashboard** | Interactive analytics with Recharts and real-time data placeholders |
+| 🧱 **Architecture Visualization** | Visual layout of user → frontend → container → cloud infrastructure |
+| 🤖 **Automation Ready** | Designed for CI/CD and container orchestration |
+| 🪄 **Accessibility Compliance** | WCAG 2.1, ARIA, and ADA-aware front-end patterns |
+| 💌 **Email Experience Demo (Coming Soon)** | Salesforce Marketing Cloud + Litmus/Email on Acid integration demo |
 
 ---
 
-## 🚀 Getting Started  
+## 🏗️ How Aurora Was Built
 
-<details>
-  <summary>🚀 <strong>Setup & Run</strong> — click to expand</summary>
-  <br/>
+### 🖥️ Frontend Foundation
+- Built with **Next.js 15** + **TypeScript**
+- Styled using **TailwindCSS** and Aurora’s custom gradient palette  
+- Integrated **Framer Motion** for soft transitions and animated UI feedback  
+- Implemented **True Shuffle** algorithm using Fisher–Yates logic  
 
-To clone and run **Aurora-UI** locally:
-
-```bash
-
-git clone https://github.com/pythonprincessux/Aurora-UI.git
-cd Aurora-UI
-npm install
-npm run dev
-
-  
-```
-</details>
-
-<br/>
-<hr/>
-<br/>
-
-</p>
-<p align="center">
-  ✨ Made with 💖, creativity, and a hint of Aurora magic by <strong>Kiara McRae</strong> ✨  
-  <br/>
-  <sub>© 2025 Aurora Platform • All Rights Reserved</sub>
-</p>
----
-
-## ☁️ Aurora Cloud Dashboard v2
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/pythonprincessux/Aurora-UI/main/public/preview-dawn.png" 
-       width="820" alt="Aurora Cloud Dashboard v2 Preview" />
-</p>
-
-Aurora Cloud Dashboard v2 brings a glowing Ember aesthetic to real-time analytics.  
-It tracks shuffle activity, user engagement, and session data — powered by **Recharts** and **Framer Motion**.
-
-### ✨ Highlights
-- 🧩 Dynamic metric cards with live glow
-- 📈 Animated line + bar charts using Recharts
-- ☁️ Cloud-native design principles with responsive layout
-- 🎨 Ember color palette: orange, amber, and warm gradients
-
-**Access:**  
-→ [**Aurora Cloud Dashboard v2**](https://aurora-ui-orcin.vercel.app/dashboard/v2)
+### ⚙️ Infrastructure & Deployment
+- 🐳 Containerized via **Docker** for cross-environment consistency  
+- ☁️ Configured for **Kubernetes** orchestration  
+- ⚡ Automated with **GitHub Actions** and **Terraform (IaC-ready)**  
+- 🚀 Deployed seamlessly to **Vercel** for live previews and auto-builds  
 
 ---
 
-<p align="center">
-  <sub>🔥 Aurora Cloud v2 • designed and engineered by Kiara McRae</sub><br/>
-  <sub>© 2025 Aurora Ember • All Rights Reserved</sub>
-</p>
+## 🧠 Aurora Architecture Diagram
+🧑‍💻 User
+↓
+💻 Frontend — Next.js · Tailwind · TypeScript
+↓
+📦 Container Layer — Docker · GitHub Actions
+↓
+☁️ Cloud — Vercel · Kubernetes · Terraform
+Every layer reflects Kiara’s workflow — from front-end craft to cloud automation.
+
+---
+
+## 🚀 The Next Evolution of Aurora
+
+| Phase | Feature | Description |
+|-------|----------|-------------|
+| 🧠 AI Integration | Vertex AI + Python microservices | Predictive playlists & adaptive dashboards |
+| 📊 Dashboard v3 | Cloud analytics | Live metrics & sentiment tracking |
+| 🎨 Aurora Design System | Component library | Accessible, scalable, multi-theme UI framework |
+
+---
+
+## 👩🏽‍💻 About the Creator
+
+**Kiara McRae** is a UX & Front-End Developer and systems thinker based in Atlanta, GA.  
+She builds tools that feel **as intuitive as they are intelligent** — blending code, design, and leadership into a unified craft.
+
+- 🎓 **BS, Human Systems Engineering (UX)** – Arizona State University (In Progress)  
+- 💻 **BS, Computer Science** – Georgia State University (In Progress)  
+- ✅ **Certifications:** Google Project Management, Six Sigma Green Belt  
+- 🏆 Twice named **Manager of the Quarter** at Starbucks for operational excellence and innovation  
+
+> “I lead, design, and automate with taste.  
+> If you value velocity and craft — we’ll get along.”
+
+---
+
+## 💬 Contact
+
+| Platform | Link |
+|-----------|------|
+| 💼 **LinkedIn** | [linkedin.com/in/kiara-mcraetopperformer](https://www.linkedin.com/in/kiara-mcraetopperformer) |
+| ✉️ **Email** | [kiarammcrae@gmail.com](mailto:kiarammcrae@gmail.com) |
+| 📞 **Phone** | +1 (678) 770-8243 |
+| 🧠 **GitHub** | [github.com/pythonprincessux](https://github.com/pythonprincessux) |
+| 🌐 **Live Site** | [aurorakiara.dev](https://aurorakiara.dev) |
+
+---
+
+## 🛠️ Tech Stack Badges
+
+![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-0F172A?logo=tailwindcss&logoColor=06B6D4)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?logo=framer&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-0db7ed?logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326ce5?logo=kubernetes&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-623CE4?logo=terraform&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-black?logo=vercel&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
+
+---
+
+## 🧾 License
+© 2025 Kiara McRae • All Rights Reserved  
+Built with 💖, motion, and ember glow ✨
+
+---
