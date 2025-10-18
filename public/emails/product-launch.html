@@ -1,81 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="margin:0;padding:0;">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light only" />
-    <title>Aurora Product Launch</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>Aurora UI — Product Launch</title>
+
     <style>
+      /* RESET */
+      body, table, td, p { margin: 0; padding: 0; }
+      img { border: 0; line-height: 100%; vertical-align: middle; }
+      table { border-collapse: collapse; }
+
+      /* BASE */
       body {
-        margin: 0;
-        padding: 0;
-        background-color: #ffffff;
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        color: #222;
-      }
-      table {
-        border-collapse: collapse;
-        width: 100%;
+        background-color: #0b0b0b;
+        color: #eaeaea;
+        font-family: "Helvetica Neue", Arial, sans-serif;
       }
       .container {
         max-width: 600px;
         margin: 0 auto;
-        background-color: #ffffff;
+        background-color: #121212;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #2a2a2a;
+      }
+
+      /* HEADER */
+      .header {
+        background: linear-gradient(135deg, #ff7f50, #ffb347);
+        text-align: center;
         padding: 40px 20px;
       }
-      h1 {
-        background: linear-gradient(90deg, #ffcc70, #ff8800);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-        font-size: 26px;
-        margin-bottom: 20px;
+      .header h1 {
+        color: #0b0b0b;
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 5px;
       }
-      p {
-        line-height: 1.6;
+      .header p {
+        color: #222;
         font-size: 15px;
-        text-align: center;
-        color: #555555;
+        margin: 0;
       }
-      .cta {
+
+      /* CONTENT */
+      .content {
+        padding: 40px 30px;
+        line-height: 1.6;
+        text-align: center;
+      }
+      .content h2 {
+        color: #ffb347;
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+      .content p {
+        color: #d1d1d1;
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+
+      /* CTA BUTTON */
+      .button {
         display: inline-block;
-        background-color: #ff8800;
-        color: white !important;
-        padding: 14px 28px;
-        border-radius: 6px;
+        padding: 14px 36px;
+        border-radius: 30px;
+        background-color: #ffb347;
+        color: #0b0b0b !important;
         text-decoration: none;
         font-weight: bold;
-        margin: 24px 0;
+        font-size: 16px;
       }
+      .button:hover {
+        background-color: #ff9c33;
+      }
+
+      /* FOOTER */
       .footer {
         text-align: center;
-        color: #999999;
-        font-size: 13px;
-        padding-top: 20px;
-        border-top: 1px solid #eeeeee;
+        font-size: 12px;
+        color: #888;
+        padding: 20px;
+      }
+      .footer a {
+        color: #ffb347;
+        text-decoration: underline;
+      }
+
+      @media screen and (max-width: 480px) {
+        .content { padding: 24px 20px; }
+        .header h1 { font-size: 24px; }
+        .content h2 { font-size: 20px; }
       }
     </style>
   </head>
+
   <body>
-    <table role="presentation">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
       <tr>
-        <td>
-          <div class="container">
-            <h1>Introducing Aurora UI</h1>
-            <p>
-              Design. Automate. Evolve.<br />
-              A new way to experience UX and automation.<br />
-              Built by <strong>Kiara McRae</strong>.
-            </p>
-            <div style="text-align:center;">
-              <a href="https://aurorakiara.dev" class="cta">Explore Aurora</a>
-            </div>
-            <p class="footer">
-              © 2025 Kiara McRae ·
-              <a href="https://aurorakiara.dev" style="color:#999;text-decoration:none;">aurorakiara.dev</a><br />
-              <a href="mailto:kiarammcrae@gmail.com" style="color:#999;text-decoration:none;">kiarammcrae@gmail.com</a>
-            </p>
-          </div>
+        <td align="center">
+          <table class="container" role="presentation" width="100%" cellspacing="0" cellpadding="0">
+            <!-- HEADER -->
+            <tr>
+              <td class="header">
+                <h1>🌟 Introducing Aurora UI</h1>
+                <p>Design. Automate. Evolve.</p>
+              </td>
+            </tr>
+
+            <!-- CONTENT -->
+            <tr>
+              <td class="content">
+                <h2>✨ Experience a New Era of UX & Automation</h2>
+                <p>
+                  Meet <strong>Aurora UI</strong> — a product where motion, design, and data unite.  
+                  Crafted by <strong>Kiara McRae</strong>, this system blends intelligent automation with clean,
+                  responsive visuals built for enterprise-grade experiences.
+                </p>
+
+                <p>
+                  Every detail follows <strong>WCAG 2.1 AA</strong> accessibility standards, with layouts tested on  
+                  <em>Litmus</em> and <em>Email on Acid</em> for universal performance.
+                </p>
+
+                <p style="margin-top: 30px;">
+                  <a href="https://aurorakiara.dev" class="button" aria-label="Explore Aurora UI">
+                    Explore Aurora →
+                  </a>
+                </p>
+              </td>
+            </tr>
+
+            <!-- FOOTER -->
+            <tr>
+              <td class="footer">
+                <p>
+                  You’re receiving this because you opted into Aurora updates.<br />
+                  <a href="#">Unsubscribe</a> · <a href="#">Privacy Policy</a>
+                </p>
+                <p>
+                  Aurora UX Labs · 123 Innovation Way · Atlanta, GA 30303<br />
+                  © 2025 Aurora UI · Designed by Kiara McRae
+                </p>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
     </table>
