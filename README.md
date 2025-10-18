@@ -17,7 +17,7 @@ It demonstrates technical and creative mastery across **frontend development**, 
 ## 🧩 Core Features
 
 | Category | Description |
-|---|---|
+|-----------|-------------|
 | 🎨 **Design System** | TailwindCSS gradient + motion components for consistent visuals |
 | ⚡ **True Shuffle** | Fisher–Yates algorithm for unbiased random playback |
 | 💌 **Email & Marketing Experience** | WCAG-compliant responsive templates (Litmus / Email on Acid tested) |
@@ -36,12 +36,9 @@ It demonstrates technical and creative mastery across **frontend development**, 
 
 ### DevOps Flow (Mermaid)
 
-> GitHub renders this if “**Allow Mermaid**” is enabled in repo settings.  
-> (We avoid slashes and special symbols in labels to keep GitHub’s parser happy.)
-
 ```mermaid
 flowchart LR
   A[Frontend - Next.js 15 + TailwindCSS] --> B[Docker Container]
-  B --> C[GitHub Actions CI-CD]
+  B --> C[GitHub Actions CI/CD]
   C --> D[Vercel Deployment]
-  D --> E[Kubernetes and Terraform Ready]
+  D --> E[Kubernetes + Terraform Ready]
