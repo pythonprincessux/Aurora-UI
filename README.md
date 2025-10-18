@@ -35,3 +35,41 @@ It demonstrates technical and creative mastery across **frontend development**, 
 ![Aurora Architecture Diagram](public/aurora-architecture.png)
 
 **Flow**
+---
+
+## 💌 Email Experience Gallery
+
+Accessible, responsive HTML email suite tested with Litmus & Email on Acid.  
+
+| Template | Preview |
+|-----------|----------|
+| ✨ Product Launch | ![Product Launch](public/emails/previews/product-launch-preview.png) |
+| 📰 Newsletter | ![Newsletter](public/emails/previews/newsletter-preview.png) |
+| 🎁 Promo Email | ![Promo](public/emails/previews/promo-preview.png) |
+
+---
+
+## 🧱 How Aurora Was Built
+
+### Frontend
+- ⚡ **Next.js 15** + **TypeScript**
+- 🎨 **TailwindCSS** with Aurora Gradient System
+- 🧠 Fisher–Yates algorithm for unbiased True Shuffle
+- 🎧 Ambient audio + Framer Motion animations
+
+### DevOps & Infrastructure
+- 🐳 Dockerized for cross-environment builds  
+- ☁️ Kubernetes-ready deployment configs  
+- ⚙️ CI/CD pipelines with **GitHub Actions** + **Terraform (IaC)**  
+- 🚀 Deployed via **Vercel**  
+
+---
+
+## 📊 DevOps Flow Diagram
+
+```mermaid
+flowchart LR
+A[Frontend — Next.js 15 + TailwindCSS] --> B[Docker Container]
+B --> C[GitHub Actions (CI/CD)]
+C --> D[Vercel Deployment]
+D --> E[Kubernetes / Terraform Ready]
