@@ -17,59 +17,31 @@ It demonstrates technical and creative mastery across **frontend development**, 
 ## 🧩 Core Features
 
 | Category | Description |
-|-----------|-------------|
-| 🎨 **Design System** | TailwindCSS gradient and motion components for consistent visuals |
+|---|---|
+| 🎨 **Design System** | TailwindCSS gradient + motion components for consistent visuals |
 | ⚡ **True Shuffle** | Fisher–Yates algorithm for unbiased random playback |
-| 💌 **Email & Marketing Experience** | WCAG-compliant responsive templates with Litmus + Email-on-Acid testing |
-| 🧠 **AI/Automation Ready** | GitHub Actions + Terraform for CI/CD and scalable deployment |
-| 📊 **Aurora Cloud Dashboard v2** | Recharts-powered analytics with adaptive theming |
-| 🪄 **Accessibility Compliance** | WCAG 2.1, ARIA, and ADA-aware front-end patterns |
-| ☁️ **Containerization** | Docker + Kubernetes deployment flow with Vercel hosting |
+| 💌 **Email & Marketing Experience** | WCAG-compliant responsive templates (Litmus / Email on Acid tested) |
+| 🧠 **Automation Ready** | GitHub Actions pipelines and Terraform-ready infrastructure |
+| 📊 **Aurora Cloud Dashboard v2** | Recharts analytics with adaptive theming |
+| 🪄 **Accessibility** | WCAG 2.1, ARIA patterns, ADA awareness |
+| ☁️ **Containerization** | Docker build → Vercel deploy (Kubernetes-ready configs) |
 
 ---
 
 ## 🧠 Aurora Architecture Diagram
 
-> A visual of how Aurora connects design → code → cloud.
+> A visual of how Aurora connects **design → code → cloud**.
 
 ![Aurora Architecture Diagram](public/aurora-architecture.png)
 
-**Flow**
----
+### DevOps Flow (Mermaid)
 
-## 💌 Email Experience Gallery
-
-Accessible, responsive HTML email suite tested with Litmus & Email on Acid.  
-
-| Template | Preview |
-|-----------|----------|
-| ✨ Product Launch | ![Product Launch](public/emails/previews/product-launch-preview.png) |
-| 📰 Newsletter | ![Newsletter](public/emails/previews/newsletter-preview.png) |
-| 🎁 Promo Email | ![Promo](public/emails/previews/promo-preview.png) |
-
----
-
-## 🧱 How Aurora Was Built
-
-### Frontend
-- ⚡ **Next.js 15** + **TypeScript**
-- 🎨 **TailwindCSS** with Aurora Gradient System
-- 🧠 Fisher–Yates algorithm for unbiased True Shuffle
-- 🎧 Ambient audio + Framer Motion animations
-
-### DevOps & Infrastructure
-- 🐳 Dockerized for cross-environment builds  
-- ☁️ Kubernetes-ready deployment configs  
-- ⚙️ CI/CD pipelines with **GitHub Actions** + **Terraform (IaC)**  
-- 🚀 Deployed via **Vercel**  
-
----
-
-## 📊 DevOps Flow Diagram
+> GitHub renders this if “**Allow Mermaid**” is enabled in repo settings.  
+> (We avoid slashes and special symbols in labels to keep GitHub’s parser happy.)
 
 ```mermaid
 flowchart LR
-A[Frontend — Next.js 15 + TailwindCSS] --> B[Docker Container]
-B --> C[GitHub Actions (CI/CD)]
-C --> D[Vercel Deployment]
-D --> E[Kubernetes / Terraform Ready]
+  A[Frontend - Next.js 15 + TailwindCSS] --> B[Docker Container]
+  B --> C[GitHub Actions CI-CD]
+  C --> D[Vercel Deployment]
+  D --> E[Kubernetes and Terraform Ready]
