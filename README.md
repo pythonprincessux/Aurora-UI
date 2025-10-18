@@ -17,6 +17,12 @@
   </a>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Built%20with-Docker-0db7ed?logo=docker&logoColor=white" alt="Built with Docker" />
+  <img src="https://img.shields.io/badge/Deployed%20on-Vercel-000000?logo=vercel&logoColor=white" alt="Deployed on Vercel" />
+  <img src="https://img.shields.io/badge/Kubernetes-Ready-326ce5?logo=kubernetes&logoColor=white" alt="Kubernetes Ready" />
+</p>
+
 ---
 
 ## ✨ Overview
